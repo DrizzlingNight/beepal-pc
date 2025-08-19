@@ -1,0 +1,78 @@
+@import '~vuetify/src/styles/main.sass';
+@import './font.scss';
+@import './variables.scss';
+
+$color-pack: false;
+
+$font-family: 'TC-regular';
+
+.v-application {
+    [class*='text-'] {
+        font-family: $font-family !important;
+    }
+    font-family: $font-family !important;
+}
+
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-size: 14px !important;
+    background-color: $bg;
+}
+
+// 一些 reset
+
+a {
+    text-decoration: none !important;
+}
+
+p, a, span {
+    line-height: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0px !important;
+}
+
+.v-btn {
+    text-transform: none !important;
+}
+
+// input 樣式
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+    border-color: $primary !important;
+    outline: 1px solid $primary;
+}
+
+// scroll bar style
+
+// chrome
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: $bg;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 2.5px;
+}
+
+::-webkit-scrollbar-corner {
+    background: $bg;
+}
+
+// firefox
+* {
+    scrollbar-color: $primary $bg; /* thumb and track color */
+    scrollbar-width: thin;
+}
+
+// SweetAlert
+.swal2-toast.swal2-show {
+    margin-top: 72px;
+    font-family: 'TC-bold';
+}
